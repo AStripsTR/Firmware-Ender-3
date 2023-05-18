@@ -834,8 +834,8 @@
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
-  #define PID_EDIT_MENU           // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
-  #define PID_AUTOTUNE_MENU       // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
+  //#define PID_EDIT_MENU           // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
+  //#define PID_AUTOTUNE_MENU       // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
 #endif
 
 // @section safety
@@ -1551,7 +1551,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -47, -5, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -47, -5, 3 }
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -2708,8 +2708,8 @@
 // Note: Test audio output with the G-Code:
 //  M300 S<frequency Hz> P<duration ms>
 //
-//#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 2
-//#define LCD_FEEDBACK_FREQUENCY_HZ 5000
+#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 2
+#define LCD_FEEDBACK_FREQUENCY_HZ 5000
 
 //
 // Tone queue size, used to keep beeps from blocking execution.
@@ -3000,7 +3000,7 @@
 // This is RAMPS-compatible using a single 10-pin connector.
 // (For CR-10 owners who want to replace the Melzi Creality board but retain the display)
 //
-#define CR10_STOCKDISPLAY
+//#define CR10_STOCKDISPLAY
 #if ENABLED(CR10_STOCKDISPLAY)
   #define RET6_12864_LCD  // Specific to the SoC (can either be RET / VET)
 #endif
@@ -3352,7 +3352,7 @@
 //
 // Ender-3 v2 OEM display. A DWIN display with Rotary Encoder.
 //
-//#define DWIN_CREALITY_LCD           // Creality UI
+#define DWIN_CREALITY_LCD           // Creality UI
 //#define DWIN_LCD_PROUI              // Pro UI by MRiscoC
 //#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
